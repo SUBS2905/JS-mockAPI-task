@@ -1,0 +1,15 @@
+CHUBB GUVI : Javascript Task Description ( 18 Jan 24 )
+By using MockApi website content as API backend develops a simple frontend app that should let the user to add, update, read and delete the records.
+HTML file should have only the body tag. All the necessary html elements need to be generated and injected into the body dynamically using DOM manipulations.
+UI should have a grid which populates all the records from API using GET endpoint. For every record on the grid should be an edit and delete button respectively.
+When a user clicks on the edit button, should open a model popup and read name or any other fields as your flow and then validate it appropriately and then update the record using API.
+Delete button click should show a confirmation to the user, once confirmed then proceed to delete else skip the delete functionality.
+Should have an add button at the top right corner. Once the user clicks on it, it should open a model window and accept input as required. Then register those details using API.
+NOTE: validations need to be implemented.
+Expectations
+1. Async await should be used to call the API’s
+2. Coding standards should be followed properly.
+3. Try to implement the project with OOPS concepts.
+4. Follow singleton functionality to all the functions/class.
+5. Try to diversify the code as much as possible.
+6. Don’t hard code any value.
