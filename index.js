@@ -20,18 +20,33 @@ async function renderData() {
     const card = document.createElement("div");
     card.className = "data-card";
 
-    const btnContainer = document.createElement("div");
-    btnContainer.className = "btn-container";
+    const userInfoContainer = document.createElement("div");
+    userInfoContainer.className = "user-info-container";
+
+    const userImgContainer = document.createElement("div");
+    userImgContainer.className = "user-image-container";
+    
+    const userImg = document.createElement("img");
+    userImg.className = "user-image";
+    userImg.src = record.avatar;
+    userImg.alt = "user image"
 
     const nameElement = document.createElement("span");
     nameElement.innerText = record.name;
 
+    const btnContainer = document.createElement("div");
+    btnContainer.className = "btn-container";
+
+
     const editBtn = createButton("Edit", () => openEditModal(record.id));
     const deleteBtn = createButton("Delete", () => openDeleteModal(record.id));
 
-    card.appendChild(nameElement);
+    userImgContainer.appendChild(userImg);
+    userInfoContainer.appendChild(userImgContainer);
+    userInfoContainer.appendChild(nameElement);
     btnContainer.appendChild(editBtn);
     btnContainer.appendChild(deleteBtn);
+    card.appendChild(userInfoContainer);
     card.appendChild(btnContainer);
 
     container.appendChild(card);
